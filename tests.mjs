@@ -19,3 +19,5 @@ assert.equal(locatePassage(corpus,'قل').candidates.length,0);
 console.log('PASS: 114 surahs / 6236 verse IDs; word alignment; unfinished passages; silence; repetition queues; revision scheduling; verse search.');
 
 const spelling=JSON.parse(await readFile(new URL('./orthography.json',import.meta.url)));setOrthography(spelling);assert.equal(canonicalQuranWord(tokenize(corpus[0].verses[1].text).at(-1)), 'العالمين');assert.equal(alignWords(tokenize(corpus[0].verses[1].text).map(canonicalQuranWord),tokenize('الحمد لله رب العالمين')).differences.length,0);assert.equal(canonicalQuranWord('الرحمن'),'الرحمن');console.log('PASS Quran spelling comparison with simple-clean text.');
+
+assert.ok(locatePassage(corpus,'الرحمن علم القران خلق الانسان').candidates.some(x=>x.surah===55&&x.verse===1));console.log('PASS passage lookup across short adjacent verses.');

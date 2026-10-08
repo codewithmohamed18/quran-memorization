@@ -39,6 +39,6 @@ export function buildQueue(verses,style='verse',repeat=3,cycles=1) {
 export function locatePassage(surahs,heard) {
  const words=tokenize(heard);if(words.length<4)return {candidates:[],reason:'Recite at least four recognized words.'};
  const phrase=words.slice(0,Math.min(8,words.length)).join(' ');let exact=[];
- for(const s of surahs)for(const v of s.verses)if(tokenize(v.text).map(canonicalQuranWord).join(' ').includes(phrase)){exact.push({surah:s.id,verse:v.n});if(exact.length>=12)return{candidates:exact,reason:'Several verses share these words.'};}
+ for(const s of surahs)for(let i=0;i<s.verses.length;i++){const v=s.verses[i],first=tokenize(v.text).map(canonicalQuranWord).join(' ');const joined=s.verses.slice(i,i+4).map(x=>tokenize(x.text).map(canonicalQuranWord).join(' ')).join(' ');const offset=joined.indexOf(phrase);if(offset>=0&&offset<first.length&&(offset===0||joined[offset-1]===' ')){exact.push({surah:s.id,verse:v.n});if(exact.length>=12)return{candidates:exact,reason:'Several verses share these words.'};}}
  return {candidates:exact,reason:exact.length?'Choose the verse you meant.':'No confident match. Select your passage and try again.'};
 }
