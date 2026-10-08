@@ -79,3 +79,18 @@ The bundled snapshot contains **176 verse-audio editions from Al Quran Cloud** a
 MP3Quran official source: <https://www.mp3quran.net/api/v3/reciters?language=eng>; documentation: <https://www.mp3quran.net/eng/api>. Full-surah playback uses the source-provided server and the documented three-digit surah MP3 filename. Availability varies by recording; unsupported surahs show a message. Full-surah recordings start at verse 1 and **do not have verse timing**, so selected-verse repetition, prompts, next-verse hints and offline verse downloads require a verse-audio edition. Alternate riwāyāt are labelled in the catalogue; the app's text remains Hafs. Audio is streamed from its original provider, not redistributed in this repository.
 
 Word comparison also uses a conservative dictionary of unambiguous Uthmani-to-simple-clean word spellings from Al Quran Cloud (same verse and aligned word counts). It normalizes expected words such as `ٱلْعَٰلَمِينَ` to the simple spelling `العالمين`; displayed Qur’an text is unchanged. Ambiguous spellings and verses with different token counts are excluded from this dictionary. This reduces orthographic false alerts but does not solve speech recognition accuracy.
+
+## Version 1.2 — Full-page practice
+
+- **Open full Mushaf page** shows all verses assigned to a Madinah page, including pages spanning multiple surahs. This is continuous flowing Arabic, not a facsimile or fixed 15-line layout. Toggle **Verse cards** for individual playback controls.
+- **Fullscreen** offers a distraction-free reader and requests browser fullscreen where supported. Tap it again to exit.
+- **Guided lesson** walks through listening, repetition, hiding, reciting and confidence-based revision.
+- **My Hifz plan** saves a surah range and verses per lesson; the next lesson begins at the first verse not marked strong.
+- Recitation reveals matched words and follows the current word. Auto scrolling and reduced animation are configurable in Settings. Possible differences can be replayed and retried; generic speech recognition can produce false alerts.
+- Night mode uses dark surfaces, readable feedback colours and consistent controls.
+
+### Recognition evaluation
+
+The Apache-2.0 `tarteel-ai/whisper-base-ar-quran` model was reviewed as a future option (https://huggingface.co/tarteel-ai/whisper-base-ar-quran). Its model card currently lists no deployed inference provider and leaves dataset/limitations unspecified. It has **not** been integrated or benchmarked in this app. Browser speech remains experimental. No claim of Tarteel-equivalent accuracy or tajweed assessment is made.
+
+Validation: syntax checks, corpus/word-alignment tests, and DOM checks covering cross-surah pages, verse references, hidden-word reveal, Hifz targets and theme changes. Actual phone microphone accuracy remains to be evaluated.
