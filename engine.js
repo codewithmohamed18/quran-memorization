@@ -1,3 +1,6 @@
+let orthography=Object.create(null);
+export function setOrthography(mapping){orthography=Object.assign(Object.create(null),mapping);}
+export function canonicalQuranWord(word){return orthography[word]||word;}
 // Word matching aids memorization; it cannot evaluate tajweed or pronunciation.
 export function normalize(text) {
  return String(text).normalize('NFD').replace(/[\p{M}ـ]/gu,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/[^\p{L}\s]/gu,' ').trim().replace(/\s+/g,' ');
@@ -36,6 +39,6 @@ export function buildQueue(verses,style='verse',repeat=3,cycles=1) {
 export function locatePassage(surahs,heard) {
  const words=tokenize(heard);if(words.length<4)return {candidates:[],reason:'Recite at least four recognized words.'};
  const phrase=words.slice(0,Math.min(8,words.length)).join(' ');let exact=[];
- for(const s of surahs)for(const v of s.verses)if(normalize(v.text).includes(phrase)){exact.push({surah:s.id,verse:v.n});if(exact.length>=12)return{candidates:exact,reason:'Several verses share these words.'};}
+ for(const s of surahs)for(const v of s.verses)if(tokenize(v.text).map(canonicalQuranWord).join(' ').includes(phrase)){exact.push({surah:s.id,verse:v.n});if(exact.length>=12)return{candidates:exact,reason:'Several verses share these words.'};}
  return {candidates:exact,reason:exact.length?'Choose the verse you meant.':'No confident match. Select your passage and try again.'};
 }

@@ -62,3 +62,20 @@ Tests cover corpus integrity, word alignment, incomplete recitation handling, si
 The text uses Hafs. Do not mix other recitation traditions with word checking. Similar-verse comparison is based on matching normalized opening words, not a comprehensive scholarly mutashabihat database. The app does not diagnose tashkeel, makharij or tajweed mistakes.
 
 Recordings remain the property of their respective sources and reciters. Only download/use/share where permitted by the source. The app code is provided in this repository; third-party Quran text, fonts and audio retain their respective terms.
+
+
+## Version 1.1: listening on phones
+
+Recite now places **Start listening** directly above the verses. Selecting the Recite tab alone does not turn on the microphone. Open the website in Chrome on Android, tap Start listening, allow the microphone and wait for **Microphone ready**. Keep the page open. If recognition is unavailable, the app shows a persistent reason and a phone setup guide; use Check my microphone to test input. No API key is needed for browser recognition, but the browser's speech service may process audio remotely and generally needs internet. Recognition quality depends on the device, browser and Arabic speech service. This is experimental word matching, not pronunciation or tajweed assessment.
+
+Matched words can reveal as you recite (Settings → Reveal matched words), with a matched-word count and recognized transcript. Finish recitation waits for final recognition results. Possible differences show expected and recognized words with verse replay. Unrecited trailing words stay “not checked”. Revision → Possible mistakes lets you dismiss false alerts. Use Next word or Hear the next verse when stuck; Practise my weak verses chooses a passage from weak confidence ratings, hints or possible differences.
+
+**Find my passage by voice** recognizes at least four Arabic words and suggests matching verses. You choose the verse because shared phrases can have multiple matches. Exact phrase lookup can fail when recognition returns incorrect words; Type words instead remains available.
+
+### Expanded qāri catalogue
+
+The bundled snapshot contains **176 verse-audio editions from Al Quran Cloud** and **288 full-surah editions from 242 MP3Quran reciters**, retrieved on 8 October 2026. It covers all entries returned by these two source catalogues at that time, rather than every reciter worldwide. Reciters may appear in both sources or in several styles/riwāyāt. Filter by recording type, search names and save favourites locally.
+
+MP3Quran official source: <https://www.mp3quran.net/api/v3/reciters?language=eng>; documentation: <https://www.mp3quran.net/eng/api>. Full-surah playback uses the source-provided server and the documented three-digit surah MP3 filename. Availability varies by recording; unsupported surahs show a message. Full-surah recordings start at verse 1 and **do not have verse timing**, so selected-verse repetition, prompts, next-verse hints and offline verse downloads require a verse-audio edition. Alternate riwāyāt are labelled in the catalogue; the app's text remains Hafs. Audio is streamed from its original provider, not redistributed in this repository.
+
+Word comparison also uses a conservative dictionary of unambiguous Uthmani-to-simple-clean word spellings from Al Quran Cloud (same verse and aligned word counts). It normalizes expected words such as `ٱلْعَٰلَمِينَ` to the simple spelling `العالمين`; displayed Qur’an text is unchanged. Ambiguous spellings and verses with different token counts are excluded from this dictionary. This reduces orthographic false alerts but does not solve speech recognition accuracy.
