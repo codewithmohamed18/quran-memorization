@@ -1,0 +1,1 @@
+{"name":"hifz-quran-memorization","version":"1.0.0","private":true,"type":"module","scripts":{"test":"node tests.mjs","check":"node --check app.js && node --check engine.js && node --check sw.js"}}

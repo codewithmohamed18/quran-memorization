@@ -1,0 +1,882 @@
+[
+  {
+    "id": "ar.abdulbasitmurattal",
+    "name": "Abdul Basit",
+    "arabic": "عبد الباسط عبد الصمد المرتل"
+  },
+  {
+    "id": "ar.abdullahbasfar",
+    "name": "Abdullah Basfar",
+    "arabic": "عبد الله بصفر"
+  },
+  {
+    "id": "ar.abdurrahmaansudais",
+    "name": "Abdurrahmaan As-Sudais",
+    "arabic": "عبدالرحمن السديس"
+  },
+  {
+    "id": "ar.abdulsamad",
+    "name": "Abdul Samad",
+    "arabic": "عبدالباسط عبدالصمد"
+  },
+  {
+    "id": "ar.shaatree",
+    "name": "Abu Bakr Ash-Shaatree",
+    "arabic": "أبو بكر الشاطري"
+  },
+  {
+    "id": "ar.ahmedajamy",
+    "name": "Ahmed ibn Ali al-Ajamy",
+    "arabic": "أحمد بن علي العجمي"
+  },
+  {
+    "id": "ar.alafasy",
+    "name": "Alafasy",
+    "arabic": "مشاري العفاسي"
+  },
+  {
+    "id": "ar.hanirifai",
+    "name": "Hani Rifai",
+    "arabic": "هاني الرفاعي"
+  },
+  {
+    "id": "ar.husary",
+    "name": "Husary",
+    "arabic": "محمود خليل الحصري"
+  },
+  {
+    "id": "ar.husarymujawwad",
+    "name": "Husary (Mujawwad)",
+    "arabic": "محمود خليل الحصري (المجود)"
+  },
+  {
+    "id": "ar.hudhaify",
+    "name": "Hudhaify",
+    "arabic": "علي بن عبدالرحمن الحذيفي"
+  },
+  {
+    "id": "ar.ibrahimakhbar",
+    "name": "Ibrahim Akhdar",
+    "arabic": "إبراهيم الأخضر"
+  },
+  {
+    "id": "ar.mahermuaiqly",
+    "name": "Maher Al Muaiqly",
+    "arabic": "ماهر المعيقلي"
+  },
+  {
+    "id": "ar.minshawi",
+    "name": "Minshawi",
+    "arabic": "محمد صديق المنشاوي"
+  },
+  {
+    "id": "ar.minshawimujawwad",
+    "name": "Minshawy (Mujawwad)",
+    "arabic": "محمد صديق المنشاوي (المجود)"
+  },
+  {
+    "id": "ar.muhammadayyoub",
+    "name": "Muhammad Ayyoub",
+    "arabic": "محمد أيوب"
+  },
+  {
+    "id": "ar.muhammadjibreel",
+    "name": "Muhammad Jibreel",
+    "arabic": "محمد جبريل"
+  },
+  {
+    "id": "ar.saoodshuraym",
+    "name": "Saood bin Ibraaheem Ash-Shuraym",
+    "arabic": "سعود الشريم"
+  },
+  {
+    "id": "ar.parhizgar",
+    "name": "Parhizgar",
+    "arabic": "شهریار پرهیزگار"
+  },
+  {
+    "id": "ar.aymanswoaid",
+    "name": "Ayman Sowaid",
+    "arabic": "أيمن سويد"
+  },
+  {
+    "id": "ar.alafasy-2",
+    "name": "Alafasy",
+    "arabic": "مشاري العفاسي"
+  },
+  {
+    "id": "ar.husary-2",
+    "name": "Husary",
+    "arabic": "محمود خليل الحصري"
+  },
+  {
+    "id": "ar.mahermuaiqly-2",
+    "name": "Maher Al Muaiqly",
+    "arabic": "ماهر المعيقلي"
+  },
+  {
+    "id": "ar.hudhaify-2",
+    "name": "Hudhaify",
+    "arabic": "علي بن عبدالرحمن الحذيفي"
+  },
+  {
+    "id": "ar.husarymujawwad-2",
+    "name": "Husary (Mujawwad)",
+    "arabic": "محمود خليل الحصري (المجود)"
+  },
+  {
+    "id": "ar.minshawi-2",
+    "name": "Minshawi",
+    "arabic": "محمد صديق المنشاوي"
+  },
+  {
+    "id": "ar.muhammadayyoub-2",
+    "name": "Muhammad Ayyoub",
+    "arabic": "محمد أيوب"
+  },
+  {
+    "id": "ar.muhammadjibreel-2",
+    "name": "Muhammad Jibreel",
+    "arabic": "محمد جبريل"
+  },
+  {
+    "id": "ar.abdulazizazzahrani",
+    "name": "Abdul Aziz az-Zahrani",
+    "arabic": "عبد العزيز الزهراني"
+  },
+  {
+    "id": "ar.abdulbariaththubaity",
+    "name": "Abdul Bari ath-Thubaity",
+    "arabic": "عبد الباري الثبيتي"
+  },
+  {
+    "id": "ar.abdulbarimohammed",
+    "name": "Abdul Bari Mohammed",
+    "arabic": "عبد الباري محمد"
+  },
+  {
+    "id": "ar.abdulbasitmujawwad",
+    "name": "Abdul Basit Abdus-Samad (Mujawwad)",
+    "arabic": "عبد الباسط عبد الصمد (مجوَّد)"
+  },
+  {
+    "id": "ar.abdulbasitmurattal-surah",
+    "name": "Abdul Basit Abdus-Samad (Murattal)",
+    "arabic": "عبد الباسط عبد الصمد (مرتَّل)"
+  },
+  {
+    "id": "ar.abdulkareemalhazmi",
+    "name": "Abdul Kareem al-Hazmi",
+    "arabic": "عبد الكريم الحازمي"
+  },
+  {
+    "id": "ar.abdullahalmatrood",
+    "name": "Abdullah al-Matrood",
+    "arabic": "عبد الله المطرود"
+  },
+  {
+    "id": "ar.abdullahawadaljuhani",
+    "name": "Abdullah Awad al-Juhani",
+    "arabic": "عبد الله عواد الجهني"
+  },
+  {
+    "id": "ar.abdullahbasfar-surah",
+    "name": "Abdullah Basfar",
+    "arabic": "عبد الله بصفر"
+  },
+  {
+    "id": "ar.abdullahkhayat",
+    "name": "Abdullah Khayat",
+    "arabic": "عبد الله خياط"
+  },
+  {
+    "id": "ar.abdullahkhulaifi",
+    "name": "Abdullah al-Khulaifi",
+    "arabic": "عبد الله الخليفي"
+  },
+  {
+    "id": "ar.abdulmohsenalharthy",
+    "name": "Abdul Mohsen al-Harthy",
+    "arabic": "عبد المحسن الحارثي"
+  },
+  {
+    "id": "ar.abdulmunimabdulmubdi",
+    "name": "Abdul Munim Abdul Mubdi",
+    "arabic": "عبد المنعم عبد المبدئ"
+  },
+  {
+    "id": "ar.abdulwadoodhaneef",
+    "name": "Abdul Wadood Haneef",
+    "arabic": "عبد الودود حنيف"
+  },
+  {
+    "id": "ar.abdurrasheedsufiabialhaarithanalkasaaee",
+    "name": "Abdur-Rasheed Sufi (Abul-Harith from al-Kisa'i)",
+    "arabic": "عبد الرشيد صوفي (أبو الحارث عن الكسائي)"
+  },
+  {
+    "id": "ar.abdurrasheedsufiaddoorianabiamr",
+    "name": "Abdur-Rasheed Sufi (ad-Doori from Abu Amr)",
+    "arabic": "عبد الرشيد صوفي (الدوري عن أبي عمرو)"
+  },
+  {
+    "id": "ar.abdurrasheedsufishubahanasim",
+    "name": "Abdur-Rasheed Sufi (Shu'bah from Asim)",
+    "arabic": "عبد الرشيد صوفي (شعبة عن عاصم)"
+  },
+  {
+    "id": "ar.abdurrasheedsufisoosi",
+    "name": "Abdur-Rasheed Sufi (as-Soosi)",
+    "arabic": "عبد الرشيد صوفي (السوسي)"
+  },
+  {
+    "id": "ar.abuabdullahmuniraltounsi",
+    "name": "Abu Abdullah Munir at-Tounsi",
+    "arabic": "أبو عبد الله منير التونسي"
+  },
+  {
+    "id": "ar.abubakraldhabi",
+    "name": "Abu Bakr adh-Dhabi",
+    "arabic": "أبو بكر الذهبي"
+  },
+  {
+    "id": "ar.adilkalbani",
+    "name": "Adil al-Kalbani",
+    "arabic": "عادل الكلباني"
+  },
+  {
+    "id": "ar.ahmadalhawashy",
+    "name": "Ahmad al-Hawashy",
+    "arabic": "أحمد الحواشي"
+  },
+  {
+    "id": "ar.ahmadkhaderaltarabulsi",
+    "name": "Ahmad Khader at-Tarabulsi",
+    "arabic": "أحمد خضر الطرابلسي"
+  },
+  {
+    "id": "ar.ahmadsulaiman",
+    "name": "Ahmad Sulaiman",
+    "arabic": "أحمد سليمان"
+  },
+  {
+    "id": "ar.ahmedalajmi",
+    "name": "Ahmed al-Ajmi",
+    "arabic": "أحمد العجمي"
+  },
+  {
+    "id": "ar.ahmedalhammad",
+    "name": "Ahmed al-Hammad",
+    "arabic": "أحمد الحماد"
+  },
+  {
+    "id": "ar.ahmedalmisbahi",
+    "name": "Ahmed al-Misbahi",
+    "arabic": "أحمد المصباحي"
+  },
+  {
+    "id": "ar.ahmedamir",
+    "name": "Ahmed Amir",
+    "arabic": "أحمد عامر"
+  },
+  {
+    "id": "ar.ahmedmohamedsalama",
+    "name": "Ahmed Mohamed Salama",
+    "arabic": "أحمد محمد سلامة"
+  },
+  {
+    "id": "ar.ahmedsaber",
+    "name": "Ahmed Saber",
+    "arabic": "أحمد صابر"
+  },
+  {
+    "id": "ar.alafasy-surah",
+    "name": "Mishary Rashid Alafasy",
+    "arabic": "مشاري راشد العفاسي"
+  },
+  {
+    "id": "ar.alashryomran",
+    "name": "al-Ashry Omran",
+    "arabic": "العشري عمران"
+  },
+  {
+    "id": "ar.alfatehmuhammadzubair",
+    "name": "al-Fateh Muhammad Zubair",
+    "arabic": "الفاتح محمد الزبير"
+  },
+  {
+    "id": "ar.alhusaynialazazi",
+    "name": "al-Husayni al-Azazi",
+    "arabic": "الحسيني العزازي"
+  },
+  {
+    "id": "ar.alhusaynialazazichildren",
+    "name": "al-Husayni al-Azazi (with children)",
+    "arabic": "الحسيني العزازي (مع الأطفال)"
+  },
+  {
+    "id": "ar.aliabdurrahmanalhuthaify",
+    "name": "Ali Abdur-Rahman al-Huthaify",
+    "arabic": "علي عبد الرحمن الحذيفي"
+  },
+  {
+    "id": "ar.aliabdurrahmanalhuthaifyqaloon",
+    "name": "Ali Abdur-Rahman al-Huthaify (Qaloon)",
+    "arabic": "علي عبد الرحمن الحذيفي (قالون)"
+  },
+  {
+    "id": "ar.alihajjajsouissi",
+    "name": "Ali Hajjaj Souissi",
+    "arabic": "علي حجاج السويسي"
+  },
+  {
+    "id": "ar.alzainmohamedahmed",
+    "name": "al-Zain Mohamed Ahmed",
+    "arabic": "الزين محمد أحمد"
+  },
+  {
+    "id": "ar.aymanswed",
+    "name": "Ayman Swed",
+    "arabic": "أيمن سويد"
+  },
+  {
+    "id": "ar.azizalili",
+    "name": "Aziz Alili",
+    "arabic": "عزيز عليلي"
+  },
+  {
+    "id": "ar.basselabdulrahmanraoui",
+    "name": "Bassel Abdul-Rahman ar-Raoui",
+    "arabic": "باسل عبد الرحمن الراوي"
+  },
+  {
+    "id": "ar.benkirane",
+    "name": "Benkirane",
+    "arabic": "بنكيران"
+  },
+  {
+    "id": "ar.darwishfarajdarwishalattar",
+    "name": "Darwish Faraj Darwish al-Attar",
+    "arabic": "درويش فرج درويش العطار"
+  },
+  {
+    "id": "ar.emadalmansary",
+    "name": "Emad al-Mansary",
+    "arabic": "عماد المنصري"
+  },
+  {
+    "id": "ar.ezzatsabri",
+    "name": "Ezzat Sabri",
+    "arabic": "عزت صبري"
+  },
+  {
+    "id": "ar.faresabbad",
+    "name": "Fares Abbad",
+    "arabic": "فارس عباد"
+  },
+  {
+    "id": "ar.fouadalkhamiri",
+    "name": "Fouad al-Khamiri",
+    "arabic": "فؤاد الخامري"
+  },
+  {
+    "id": "ar.hamadsinan",
+    "name": "Hamad Sinan",
+    "arabic": "حمد سنان"
+  },
+  {
+    "id": "ar.hamdyalsayedtolbasaad",
+    "name": "Hamdy al-Sayed Tolba Saad",
+    "arabic": "حمدي السيد طلبة سعد"
+  },
+  {
+    "id": "ar.haniarrifai",
+    "name": "Hani ar-Rifai",
+    "arabic": "هاني الرفاعي"
+  },
+  {
+    "id": "ar.hasanhashem",
+    "name": "Hasan Hashem",
+    "arabic": "حسن هاشم"
+  },
+  {
+    "id": "ar.hassansaleh",
+    "name": "Hassan Saleh",
+    "arabic": "حسن صالح"
+  },
+  {
+    "id": "ar.hatemfarid",
+    "name": "Hatem Farid",
+    "arabic": "حاتم فريد"
+  },
+  {
+    "id": "ar.ibrahimalakhdar",
+    "name": "Ibrahim al-Akhdar",
+    "arabic": "إبراهيم الأخضر"
+  },
+  {
+    "id": "ar.ibrahimaldossari",
+    "name": "Ibrahim ad-Dossari",
+    "arabic": "إبراهيم الدوسري"
+  },
+  {
+    "id": "ar.ibrahimaljormy",
+    "name": "Ibrahim al-Jormy",
+    "arabic": "إبراهيم الجرمي"
+  },
+  {
+    "id": "ar.ilhantok",
+    "name": "Ilhan Tok",
+    "arabic": "إلهان توك"
+  },
+  {
+    "id": "ar.imadzuhairhafez",
+    "name": "Imad Zuhair Hafez",
+    "arabic": "عماد زهير حافظ"
+  },
+  {
+    "id": "ar.jamaanalosaimi",
+    "name": "Jamaan al-Osaimi",
+    "arabic": "جمعان العصيمي"
+  },
+  {
+    "id": "ar.jamalshakerabdullah",
+    "name": "Jamal Shaker Abdullah",
+    "arabic": "جمال شاكر عبد الله"
+  },
+  {
+    "id": "ar.jazzaalswaileh",
+    "name": "Jazza al-Swaileh",
+    "arabic": "جزاع الصويلح"
+  },
+  {
+    "id": "ar.kamel",
+    "name": "Kamel",
+    "arabic": "كامل"
+  },
+  {
+    "id": "ar.khaledalqahtani",
+    "name": "Khaled al-Qahtani",
+    "arabic": "خالد القحطاني"
+  },
+  {
+    "id": "ar.khaledbarakat",
+    "name": "Khaled Barakat",
+    "arabic": "خالد بركات"
+  },
+  {
+    "id": "ar.khalidabdulkafi",
+    "name": "Khalid Abdul-Kafi",
+    "arabic": "خالد عبد الكافي"
+  },
+  {
+    "id": "ar.khalidaljalil",
+    "name": "Khalid al-Jalil",
+    "arabic": "خالد الجليل"
+  },
+  {
+    "id": "ar.khalidalmohanna",
+    "name": "Khalid al-Mohanna",
+    "arabic": "خالد المهنا"
+  },
+  {
+    "id": "ar.khalifaaltunaiji",
+    "name": "Khalifa at-Tunaiji",
+    "arabic": "خليفة الطنيجي"
+  },
+  {
+    "id": "ar.laayounelkouchi",
+    "name": "Laayoun el-Kouchi",
+    "arabic": "العيون الكوشي"
+  },
+  {
+    "id": "ar.lesaintcorantraduitenfrancais",
+    "name": "Le Saint Coran traduit en français",
+    "arabic": "القرآن الكريم مترجمًا بالفرنسية"
+  },
+  {
+    "id": "ar.mahershakhashiro",
+    "name": "Maher Shakhashiro",
+    "arabic": "ماهر شخاشيرو"
+  },
+  {
+    "id": "ar.mahmoodalrifai",
+    "name": "Mahmood al-Rifai",
+    "arabic": "محمود الرفاعي"
+  },
+  {
+    "id": "ar.mahmoudalialbanna",
+    "name": "Mahmoud Ali al-Banna",
+    "arabic": "محمود علي البنا"
+  },
+  {
+    "id": "ar.mahmoudelsheimy",
+    "name": "Mahmoud el-Sheimy",
+    "arabic": "محمود الشيمي"
+  },
+  {
+    "id": "ar.mahmoudsaaddarouich",
+    "name": "Mahmoud Saad Darouich",
+    "arabic": "محمود سعد درويش"
+  },
+  {
+    "id": "ar.mahmoudsayedeltayeb",
+    "name": "Mahmoud Sayed el-Tayeb",
+    "arabic": "محمود سيد الطيب"
+  },
+  {
+    "id": "ar.misharyrashidalafasy",
+    "name": "Mishary Rashid Alafasy",
+    "arabic": "مشاري راشد العفاسي"
+  },
+  {
+    "id": "ar.moeedhalharthi",
+    "name": "Moeedh al-Harthi",
+    "arabic": "معيض الحارثي"
+  },
+  {
+    "id": "ar.mohamedabdelaziz",
+    "name": "Mohamed Abdel-Aziz",
+    "arabic": "محمد عبد العزيز"
+  },
+  {
+    "id": "ar.mohamedabdelhakimsaadalabdullah",
+    "name": "Mohamed Abdel-Hakim Saad al-Abdullah",
+    "arabic": "محمد عبد الحكيم سعد العبد الله"
+  },
+  {
+    "id": "ar.mohamedaljaberyalheyani",
+    "name": "Mohamed al-Jabery al-Heyani",
+    "arabic": "محمد الجابري الحياني"
+  },
+  {
+    "id": "ar.mohamedalmohisni",
+    "name": "Mohamed al-Mohisni",
+    "arabic": "محمد المحيسني"
+  },
+  {
+    "id": "ar.mohamedelkantaoui",
+    "name": "Mohamed el-Kantaoui",
+    "arabic": "محمد القنطاوي"
+  },
+  {
+    "id": "ar.mohamedhassan",
+    "name": "Mohamed Hassan",
+    "arabic": "محمد حسان"
+  },
+  {
+    "id": "ar.mohamedmaabad",
+    "name": "Mohamed Maabad",
+    "arabic": "محمد معبد"
+  },
+  {
+    "id": "ar.mohamedosmankhan",
+    "name": "Mohamed Osman Khan",
+    "arabic": "محمد عثمان خان"
+  },
+  {
+    "id": "ar.mohamedshaabanabuqarn",
+    "name": "Mohamed Shaaban Abu Qarn",
+    "arabic": "محمد شعبان أبو قرن"
+  },
+  {
+    "id": "ar.mohamedtablawi",
+    "name": "Mohamed at-Tablawi",
+    "arabic": "محمد الطبلاوي"
+  },
+  {
+    "id": "ar.mohammadismaeelalmuqaddim",
+    "name": "Mohammad Ismaeel al-Muqaddim",
+    "arabic": "محمد إسماعيل المقدم"
+  },
+  {
+    "id": "ar.mohammadrachadalshareef",
+    "name": "Mohammad Rachad al-Shareef",
+    "arabic": "محمد رشاد الشريف"
+  },
+  {
+    "id": "ar.mohammedbinsalehabuzaid",
+    "name": "Mohammed bin Saleh Abu Zaid",
+    "arabic": "محمد بن صالح أبو زيد"
+  },
+  {
+    "id": "ar.muftahalsaltany",
+    "name": "Muftah al-Saltany",
+    "arabic": "مفتاح السلطني"
+  },
+  {
+    "id": "ar.muhammadabdulkareem",
+    "name": "Muhammad Abdul-Kareem",
+    "arabic": "محمد عبد الكريم"
+  },
+  {
+    "id": "ar.muhammadalaalimaldokali",
+    "name": "Muhammad al-Aalim ad-Dokali",
+    "arabic": "محمد العالم الدوكالي"
+  },
+  {
+    "id": "ar.muhammadalluhaidan",
+    "name": "Muhammad al-Luhaidan",
+    "arabic": "محمد اللحيدان"
+  },
+  {
+    "id": "ar.muhammadalmehysni",
+    "name": "Muhammad al-Mehysni",
+    "arabic": "محمد المحيسني"
+  },
+  {
+    "id": "ar.muhammadalsubayyil",
+    "name": "Muhammad as-Subayyil",
+    "arabic": "محمد السبيل"
+  },
+  {
+    "id": "ar.muhammadanwarshahat",
+    "name": "Muhammad Anwar Shahat",
+    "arabic": "محمد أنور شحات"
+  },
+  {
+    "id": "ar.muhammadayyub",
+    "name": "Muhammad Ayyub",
+    "arabic": "محمد أيوب"
+  },
+  {
+    "id": "ar.muhammadsalehalimshah",
+    "name": "Muhammad Saleh Alim Shah",
+    "arabic": "محمد صالح عالم شاه"
+  },
+  {
+    "id": "ar.muhammadsiddiqalminshawimujawwad",
+    "name": "Muhammad Siddiq al-Minshawi (Mujawwad)",
+    "arabic": "محمد صديق المنشاوي (مجوَّد)"
+  },
+  {
+    "id": "ar.muhammadsulaimanpatel",
+    "name": "Muhammad Sulaiman Patel",
+    "arabic": "محمد سليمان باتل"
+  },
+  {
+    "id": "ar.musabilal",
+    "name": "Musa Bilal",
+    "arabic": "موسى بلال"
+  },
+  {
+    "id": "ar.mustafaallahouni",
+    "name": "Mustafa al-Lahouni",
+    "arabic": "مصطفى اللاهوني"
+  },
+  {
+    "id": "ar.mustafaismail",
+    "name": "Mustafa Ismail",
+    "arabic": "مصطفى إسماعيل"
+  },
+  {
+    "id": "ar.mustafaraadalazzawi",
+    "name": "Mustafa Raad al-Azzawi",
+    "arabic": "مصطفى رعد العزاوي"
+  },
+  {
+    "id": "ar.mustaphagharbi",
+    "name": "Mustapha Gharbi",
+    "arabic": "مصطفى غربي"
+  },
+  {
+    "id": "ar.nabilarrifai",
+    "name": "Nabil ar-Rifai",
+    "arabic": "نبيل الرفاعي"
+  },
+  {
+    "id": "ar.nasseralqatami",
+    "name": "Nasser al-Qatami",
+    "arabic": "ناصر القطامي"
+  },
+  {
+    "id": "ar.neamahalhassan",
+    "name": "Neamah al-Hassan",
+    "arabic": "نعمة الحسن"
+  },
+  {
+    "id": "ar.obeikan",
+    "name": "al-Obeikan",
+    "arabic": "العبيكان"
+  },
+  {
+    "id": "ar.oimaoqataris",
+    "name": "ar.oimaoqataris",
+    "arabic": "ar.oimaoqataris"
+  },
+  {
+    "id": "ar.omaralkazabri",
+    "name": "Omar al-Kazabri",
+    "arabic": "عمر القزابري"
+  },
+  {
+    "id": "ar.osamabinalialghanim",
+    "name": "Osama bin Ali al-Ghanim",
+    "arabic": "أسامة بن علي الغانم"
+  },
+  {
+    "id": "ar.rachidbelalia",
+    "name": "Rachid Belalia",
+    "arabic": "رشيد بلعالية"
+  },
+  {
+    "id": "ar.saberabdulhakam",
+    "name": "Saber Abdul-Hakam",
+    "arabic": "صابر عبد الحكم"
+  },
+  {
+    "id": "ar.sadaqatali",
+    "name": "Sadaqat Ali",
+    "arabic": "صداقت علي"
+  },
+  {
+    "id": "ar.sahlyasin",
+    "name": "Sahl Yasin",
+    "arabic": "سهل ياسين"
+  },
+  {
+    "id": "ar.saidalshaalan",
+    "name": "Said ash-Shaalan",
+    "arabic": "سعيد الشعلان"
+  },
+  {
+    "id": "ar.salahalbudair",
+    "name": "Salah al-Budair",
+    "arabic": "صلاح البدير"
+  },
+  {
+    "id": "ar.salahalhashem",
+    "name": "Salah al-Hashem",
+    "arabic": "صلاح الهاشم"
+  },
+  {
+    "id": "ar.salahbaothman",
+    "name": "Salah Ba-Othman",
+    "arabic": "صلاح باعثمان"
+  },
+  {
+    "id": "ar.samirbelaachya",
+    "name": "Samir Belaachya",
+    "arabic": "سمير بلعشية"
+  },
+  {
+    "id": "ar.saudalshuraim",
+    "name": "Saud ash-Shuraim",
+    "arabic": "سعود الشريم"
+  },
+  {
+    "id": "ar.sayedramadan",
+    "name": "Sayed Ramadan",
+    "arabic": "سيد رمضان"
+  },
+  {
+    "id": "ar.shahriarparhizgar",
+    "name": "Shahriar Parhizgar",
+    "arabic": "شهريار پرهيزگار"
+  },
+  {
+    "id": "ar.sudaisshuraymnaeemsultan",
+    "name": "Sudais & Shuraym (with Naeem Sultan translation)",
+    "arabic": "السديس والشريم (مع ترجمة نعيم سلطان)"
+  },
+  {
+    "id": "ar.tamerislam",
+    "name": "Tamer Islam",
+    "arabic": "تامر إسلام"
+  },
+  {
+    "id": "ar.tareqabdulganidaawob",
+    "name": "Tareq Abdul-Gani Daawob",
+    "arabic": "طارق عبد الغني دعوب"
+  },
+  {
+    "id": "ar.tawfeeqassayegh",
+    "name": "Tawfeeq as-Sayegh",
+    "arabic": "توفيق الصايغ"
+  },
+  {
+    "id": "ar.turkiebeidalmarri",
+    "name": "Turki Ebeid al-Marri",
+    "arabic": "تركي عبيد المري"
+  },
+  {
+    "id": "ar.waeldesouky",
+    "name": "Wael ad-Desouky",
+    "arabic": "وائل الدسوقي"
+  },
+  {
+    "id": "ar.waelradwanqureshi",
+    "name": "Wael Radwan Qureshi",
+    "arabic": "وائل رضوان قريشي"
+  },
+  {
+    "id": "ar.waleedidreesalmaneese",
+    "name": "Waleed Idrees al-Maneese",
+    "arabic": "وليد إدريس المنيسي"
+  },
+  {
+    "id": "ar.waleednaehi",
+    "name": "Waleed an-Naehi",
+    "arabic": "وليد الناهي"
+  },
+  {
+    "id": "ar.waleedsamiraliabdulmajidsorour",
+    "name": "Waleed Samir Ali Abdul-Majid Sorour",
+    "arabic": "وليد سمير علي عبد المجيد سرور"
+  },
+  {
+    "id": "ar.walidalshatti",
+    "name": "Walid ash-Shatti",
+    "arabic": "وليد الشطي"
+  },
+  {
+    "id": "ar.walidfathibashta",
+    "name": "Walid Fathi Bashta",
+    "arabic": "وليد فتحي بشتة"
+  },
+  {
+    "id": "ar.yahyahawwa",
+    "name": "Yahya Hawwa",
+    "arabic": "يحيى حوى"
+  },
+  {
+    "id": "ar.yassenaljazairi",
+    "name": "Yassen al-Jazairi",
+    "arabic": "ياسين الجزائري"
+  },
+  {
+    "id": "ar.yasseraldossari",
+    "name": "Yasser ad-Dossari",
+    "arabic": "ياسر الدوسري"
+  },
+  {
+    "id": "ar.yasseralmazroyee",
+    "name": "Yasser al-Mazroyee",
+    "arabic": "ياسر المزروعي"
+  },
+  {
+    "id": "ar.yasserqureshi",
+    "name": "Yasser Qureshi",
+    "arabic": "ياسر قريشي"
+  },
+  {
+    "id": "ar.yassersalama",
+    "name": "Yasser Salama",
+    "arabic": "ياسر سلامة"
+  },
+  {
+    "id": "ar.yassersarhaneldeeb",
+    "name": "Yasser Sarhan el-Deeb",
+    "arabic": "ياسر سرحان الديب"
+  },
+  {
+    "id": "ar.yousufalshoaey",
+    "name": "Yousuf ash-Shoaey",
+    "arabic": "يوسف الشويعي"
+  },
+  {
+    "id": "ar.yousufbinnoahahmad",
+    "name": "Yousuf bin Noah Ahmad",
+    "arabic": "يوسف بن نوح أحمد"
+  }
+]
