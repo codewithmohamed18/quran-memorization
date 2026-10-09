@@ -66,3 +66,9 @@ setOrthography(JSON.parse(await readFile(new URL('./orthography.json',import.met
 assert.equal(locatePassage([corpus[0]],'الحمد لله رب العالمين').candidates[0].verse,2);
 assert.equal(locatePassage([corpus[0]],'الحمد لله').candidates.length,0);
 console.log('PASS heard-word spelling normalization, scoped Quran lookup and minimum search evidence.');
+
+const audioCatalog=JSON.parse(await readFile(new URL('./reciters.json',import.meta.url),'utf8'));
+assert.equal(new Set(audioCatalog.map(r=>r.id)).size,audioCatalog.length);
+for(const r of audioCatalog){assert(['verse','surah'].includes(r.kind));if(r.kind==='verse')assert(r.bitrates?.length>0);else{assert(r.server.startsWith('https://'));assert(r.surahs.length>0);assert(r.surahs.every(n=>Number.isInteger(n)&&n>=1&&n<=114));}}
+assert.equal(audioCatalog.find(r=>r.id==='ar.abdulbarimohammed').kind,'surah');
+console.log('PASS all catalogue editions classified with source-provided verse bitrates or full-surah file lists. This does not establish continuous provider availability.');

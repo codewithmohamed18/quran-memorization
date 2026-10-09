@@ -74,7 +74,7 @@ Matched words can reveal as you recite (Settings → Reveal matched words), with
 
 ### Expanded qāri catalogue
 
-The bundled snapshot contains **176 verse-audio editions from Al Quran Cloud** and **288 full-surah editions from 242 MP3Quran reciters**, retrieved on 8 October 2026. It covers all entries returned by these two source catalogues at that time, rather than every reciter worldwide. Reciters may appear in both sources or in several styles/riwāyāt. Filter by recording type, search names and save favourites locally.
+The bundled snapshot contains **28 verse-audio editions and 148 full-surah editions from Al Quran Cloud**, plus **288 full-surah editions from MP3Quran**, retrieved on 8 October 2026. It covers all entries returned by these two source catalogues at that time, rather than every reciter worldwide. Reciters may appear in both sources or in several styles/riwāyāt. Filter by recording type, search names and save favourites locally.
 
 MP3Quran official source: <https://www.mp3quran.net/api/v3/reciters?language=eng>; documentation: <https://www.mp3quran.net/eng/api>. Full-surah playback uses the source-provided server and the documented three-digit surah MP3 filename. Availability varies by recording; unsupported surahs show a message. Full-surah recordings start at verse 1 and **do not have verse timing**, so selected-verse repetition, prompts, next-verse hints and offline verse downloads require a verse-audio edition. Alternate riwāyāt are labelled in the catalogue; the app's text remains Hafs. Audio is streamed from its original provider, not redistributed in this repository.
 
@@ -164,3 +164,11 @@ Voice search adds surah scope, editable recognized words and candidate previews.
 Checks: syntax and corpus comparison tests; controlled DOM checks for settings filters, voice scope, verse fallback without changing saved qari, test prompt/answer transition, missing-cloud-key fallback and prepared-local-model recording route. Existing repeat, uncertainty, silence and feedback checks pass. These are software checks, not learner-microphone accuracy percentages.
 
 A larger free candidate, mohammed/fastconformer-quran-ar-onnx-int8, was researched. Its public file listing is about 143 MB, and its author notes pending runtime verification/cache configuration. It is not shipped as an unverified replacement: https://huggingface.co/mohammed/fastconformer-quran-ar-onnx-int8/blob/main/README.md . The current Quran model is unchanged.
+
+## Hifz 1.9: passage navigation and recording catalogue repair
+
+Choose passage is visible under the reader heading in Read, Memorize, Recite and Test. Its tabs select a surah, an ayah range, a juz or a Madinah page. Juz opens its first complete page; Next passage continues page by page. Passage changes keep the practice mode. The header uses the current page's ayah rather than a cursor retained from the previous page.
+
+The qāri picker shows a check beside the saved recording. Source metadata retrieved on 9 October 2026 corrected 148 full-surah Cloud entries previously mislabelled as ayah audio. Verse audio now uses source-listed CDN bitrates directly; Retry tries the next available bitrate. Cloud full-surah files use unpadded filenames; MP3Quran uses three-digit filenames. A full-surah edition cannot play a timed individual ayah: ayah taps use a matching verse edition or the saved verse qāri, explicitly named in the player. No silent voice substitution is claimed. Source file lists are not a guarantee that every recording is reachable on every network.
+
+Playing ayahs highlight every visible word, including in continuous page layout. Tapping an ayah marker also plays that ayah. Recognition misheard me dismisses unconfirmed automatic alerts for the selected passage while preserving confirmed notes. The speech model has not changed; checking remains an experimental word comparison, not tajweed assessment.
