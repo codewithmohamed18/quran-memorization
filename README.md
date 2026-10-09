@@ -124,3 +124,12 @@ Controlled evaluation in `recognition-evaluation.json`: three Alafasy Fatiha cli
 
 ## 1.4.1 — Tracking recovery correction
 Recover follow-along after three adjacent exact recognized words while preserving earlier uncertain differences. Only matched words reveal automatically; recovery is not proof that skipped words were correct. Add explicit Start from this ayah and New attempt controls. Remove misleading first-word underline when no position is established and distinguish total matches from tracking status. This corrects 1.4.0's strict-prefix stall; microphone accuracy remains unmeasured for individual users.
+
+## 1.5.0 — Focus reader and Indo-Pak script
+- Text-only view works in all four practice modes, with remembered reader preferences and a persistent Show controls button.
+- Tap visible ayah text to play verse audio; hidden text asks before listening or viewing. Keyboard Enter/Space also works. Full-surah-only reciters require choosing verse audio. Recording blocks competing playback; playback stops live recognition.
+- Reader options choose matching-word or completed-ayah reveal, tap behaviour and Quran script. Full-page memory opens the whole current Madinah page.
+- Indo-Pak text is fetched from the official Quran.com endpoint `https://api.quran.com/api/v4/quran/verses/indopak`; font is the matching IndoPak Nastaleeq face documented by Quran Foundation, hosted at verses.quran.foundation. These resources remain externally hosted rather than republished. First load requires internet, and provider availability/CORS can affect access.
+- Every loaded verse reference is checked against the 6,236-verse corpus. Indo-Pak and Uthmani split some words differently: unequal-count ayahs use whole-ayah hide/reveal rather than guessing a word correspondence. Internal comparison stays on the original Uthmani corpus.
+- Flowing Indo-Pak script retains Madinah 604-page navigation; it is **not** a 13-line Indo-Pak print edition. Exact 13-line color tajweed remains pending.
+- No recognition/pronunciation accuracy percentage is claimed. Audio and microphone validation still requires real user-device testing.
