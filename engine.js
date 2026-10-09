@@ -44,12 +44,27 @@ export function locatePassage(surahs,heard) {
 }
 
 // Repeat practice removes only exact complete repetitions; mismatches stay visible.
-export function alignPractice(expected,heard,{complete=false,repeat=false}={}){
+export function alignPractice(expected,heard,{complete=false,repeat=false,verseRefs=[]}={}){
  const a=Array.isArray(expected)?expected:tokenize(expected),b=Array.isArray(heard)?heard:tokenize(heard);
  let offset=0,repetitions=0;
- if(repeat&&a.length){while(b.length-offset>=a.length&&a.every((w,i)=>w===b[offset+i])){repetitions++;offset+=a.length;}}
- const input=offset>0?(offset===b.length?a:b.slice(offset)):b;
- return {...alignWords(a,input,{complete}),repetitions};
+ let inputWords=b,verseRepetitions=0;
+ if(repeat&&verseRefs.length===a.length){
+  const groups=[];for(let i=0;i<a.length;){let end=i+1;while(end<a.length&&verseRefs[end]===verseRefs[i])end++;groups.push(a.slice(i,end));i=end;}
+  const out=[];let cursor=0;
+  for(let g=0;g<groups.length;g++){
+   const words=groups[g],sameAt=()=>words.every((w,i)=>b[cursor+i]===w);
+   if(!sameAt()){out.push(...b.slice(cursor));cursor=b.length;break;}
+   out.push(...b.slice(cursor,cursor+words.length));cursor+=words.length;
+   // Shared prefixes are ambiguous: retain them rather than infer a restart.
+   const next=groups[g+1],ambiguous=next&&words.every((w,i)=>next[i]===w);
+   if(!ambiguous)while(cursor+words.length<=b.length&&sameAt()){cursor+=words.length;verseRepetitions++;}
+  }
+  out.push(...b.slice(cursor));inputWords=out;
+ }
+
+ if(repeat&&a.length){while(inputWords.length-offset>=a.length&&a.every((w,i)=>w===inputWords[offset+i])){repetitions++;offset+=a.length;}}
+ const input=offset>0?(offset===inputWords.length?a:inputWords.slice(offset)):inputWords;
+ return {...alignWords(a,input,{complete}),repetitions,verseRepetitions};
 }
 export function hasAudibleSignal(samples,threshold=.001){if(!samples?.length)return false;let sum=0;for(const x of samples){if(!Number.isFinite(x))return false;sum+=x*x;}return Math.sqrt(sum/samples.length)>=threshold;}
 

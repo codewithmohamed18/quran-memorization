@@ -50,3 +50,12 @@ const {trackedWordIndices}=await import('./engine.js');
 assert.equal(trackedWordIndices(recovered).has(1),false);
 assert.equal(trackingPosition(alignWords(['a','b','c','d'],['x','x','x','x'])),0);
 console.log('PASS uncertain and scattered matches cannot advance live reader.');
+
+// Exact ayah repeats in practice; an incorrect repeat is never discarded.
+const ex=['a','b','c','d','e','f'],refs=['1:1','1:1','1:1','1:2','1:2','1:2'];
+const repeatAyah=alignPractice(ex,['a','b','c','a','b','c','d','e','f'],{repeat:true,verseRefs:refs});
+assert.equal(repeatAyah.differences.length,0);assert.equal(repeatAyah.verseRepetitions,1);
+assert(alignPractice(ex,['a','b','c','a','x','c','d','e','f'],{repeat:true,verseRefs:refs}).differences.length>0);
+assert(alignPractice(ex,['a','b','c','a','b','c','d','e','f'],{repeat:false,verseRefs:refs}).differences.length>0);
+const shared=alignPractice(['a','b','a','b','c'],['a','b','a','b','c'],{repeat:true,verseRefs:['1','1','2','2','2']});assert.equal(shared.verseRepetitions,0);assert.equal(shared.differences.length,0);
+console.log('PASS exact verse restarts, incorrect repeats retained, shared prefixes preserved.');

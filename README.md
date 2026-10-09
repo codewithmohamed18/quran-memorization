@@ -136,3 +136,18 @@ Recover follow-along after three adjacent exact recognized words while preservin
 
 ### 1.6.0 — playback recovery and phone reading
 Failed playback now shows an explicit error state with Retry and Choose qāri. Retry refreshes the selected verse URL without silently switching reciters. Loading, playing and paused states have matching accessible labels. Compact phone controls, reserved player space and natural right-aligned flowing text reduce overlap and stretched word gaps. Settings now include a Listening section. Controlled UI checks cover failed playback, retry, cache refresh, hidden/revealed text, verse navigation and final-only recognition feedback. These changes do not establish new acoustic recognition accuracy or tajweed assessment. Exact 13-line colour-coded printed pages remain pending verified source data.
+
+### 1.7.0 — Quran-first reader and careful checking
+The text-only reader now opens with a passage header, four practice modes, a short status strip and a bottom microphone dock. Tools provide page selection, repeat recitation, previous/current ayah context, verse connections, voice search, mistake notebooks, page notes, revision plans and free checking setup. New installations begin on the complete first page; existing passages and progress are retained. Uthmani and Indo-Pak remain available as flowing text, not exact printed 13-line layouts.
+
+Free checking setup exposes the existing live browser recognition and recorded on-device Quran model without a mandatory API key. The model is unchanged: no unmeasured acoustic accuracy improvement is claimed. Alternative models were researched but not shipped without compatible licensing and phone evaluation.
+
+Repeat practice now collapses only exact consecutive ayah repeats when their boundaries are unambiguous. Changed repeats remain differences; shared prefixes remain intact. Interim browser hypotheses may follow words but do not flash suspected error highlights. Final comparisons with too little matching context do not automatically add mistake notes. This is a conservative text-alignment heuristic, not a model confidence probability. The comparison remains available for user review, including actual incorrect recitation. Feedback survives screen rerenders until a fresh attempt/passage.
+
+Validation: syntax checks; corpus-wide 6,236 exact / 6,236 controlled substitution comparisons; exact restarts, changed repeats and shared-prefix tests; controlled DOM checks for dock, first full page, interim highlights, uncertain-note suppression, feedback persistence, free-method selection and attempt reset. No new live-phone or learner-audio accuracy percentage was measured. Tajweed, makharij and diacritic assessment are not implemented.
+
+Feedback and model research:
+- https://play.google.com/store/apps/details?hl=en-CA&id=com.mmmoussa.iqra — user requests for loops and fewer false flags.
+- https://support.tarteel.ai/en/articles/16559266-a-mistake-was-flagged-that-i-didn-t-make — noise, microphone and model limitations.
+- https://github.com/yazinsai/tilawa — alternative on-device recognition and split code/model licensing.
+- https://huggingface.co/Sharjeelbaig/whisper-tiny-ar-quran-onnx — existing Apache-2.0 Quran model conversion.
