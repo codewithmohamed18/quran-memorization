@@ -121,3 +121,6 @@ Controlled evaluation in `recognition-evaluation.json`: three Alafasy Fatiha cli
 - Microphone transcript is collapsed by default; softer highlights and accessible ayah controls.
 - Reveal-current-ayah hint, two-ayah connection lesson, page-specific mistake notes and highlighted differences in similar openings. Existing recording export, adjustable phrase hints, revision scheduling and correction timing remain available.
 - Exact 13-line color tajweed edition is pending verification of a suitable source and layout. Current reader remains flowing Uthmani text; no tajweed assessment.
+
+## 1.4.1 — Tracking recovery correction
+Recover follow-along after three adjacent exact recognized words while preserving earlier uncertain differences. Only matched words reveal automatically; recovery is not proof that skipped words were correct. Add explicit Start from this ayah and New attempt controls. Remove misleading first-word underline when no position is established and distinguish total matches from tracking status. This corrects 1.4.0's strict-prefix stall; microphone accuracy remains unmeasured for individual users.

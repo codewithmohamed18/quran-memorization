@@ -53,5 +53,7 @@ export function alignPractice(expected,heard,{complete=false,repeat=false}={}){
 }
 export function hasAudibleSignal(samples,threshold=.001){if(!samples?.length)return false;let sum=0;for(const x of samples){if(!Number.isFinite(x))return false;sum+=x*x;}return Math.sqrt(sum/samples.length)>=threshold;}
 
-// Only contiguous exact matches move the live reader; later coincidences stay unverified.
-export function trackingPosition(alignment){let position=0;for(const op of alignment?.ops||[]){if(op.kind!=='match'||op.index!==position)break;position++;}return position;}
+// Following is separate from grading: recover only on a run of at least three
+// consecutive matches after an uncertain word. Earlier differences remain recorded.
+export function trackingPosition(alignment){let position=0,run=[];for(const op of alignment?.ops||[]){if(op.kind!=='match'){run=[];continue;}if(op.index===position){position++;run=[];continue;}if(run.length&&op.index!==run[run.length-1]+1)run=[];run.push(op.index);if(run.length>=3)position=op.index+1;}return position;}
+export function trackedWordIndices(alignment){const end=trackingPosition(alignment);return new Set((alignment?.ops||[]).filter(op=>op.kind==='match'&&op.index<end).map(op=>op.index));}
