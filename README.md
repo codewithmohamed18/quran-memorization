@@ -94,3 +94,22 @@ Word comparison also uses a conservative dictionary of unambiguous Uthmani-to-si
 The Apache-2.0 `tarteel-ai/whisper-base-ar-quran` model was reviewed as a future option (https://huggingface.co/tarteel-ai/whisper-base-ar-quran). Its model card currently lists no deployed inference provider and leaves dataset/limitations unspecified. It has **not** been integrated or benchmarked in this app. Browser speech remains experimental. No claim of Tarteel-equivalent accuracy or tajweed assessment is made.
 
 Validation: syntax checks, corpus/word-alignment tests, and DOM checks covering cross-surah pages, verse references, hidden-word reveal, Hifz targets and theme changes. Actual phone microphone accuracy remains to be evaluated.
+
+## Version 1.3 — Helpful correction and revision
+
+- **Practice style** separates gentle unfinished practice, complete tests (including omitted endings), and exact full-passage repeats. **Restart this verse** lets you restart without treating the restart as added words.
+- **Next word** follows your recognized position and records hints only against the verse helped. **Next phrase** reveals up to three words. **I'm stuck** offers gentle help.
+- **Mistake notebook** separates uncertain recognizer alerts from confirmed mistakes. An automatic alert never changes a confidence rating; confirming it schedules revision. Quran playback and retry are available beside each note.
+- **Correction style** supports visual-only, quiet sound, or optional device speech for short English guidance. Quran correction uses real qari audio. Spoken guidance is stopped before microphone recording or Quran playback. Help can appear during recitation, after finishing, or only when requested.
+- **Repeat after the qari** leaves a pause at least as long as the preceding verse recording, giving you time to repeat it aloud.
+- **Page/Juz plans**, a saved lesson mode, non-repeating quiz rounds and **Lesson summary** support daily practice. Page plans open one full page at a time; progression uses your confidence ratings.
+- **Simple practice screen** keeps passage and qari configuration in a disclosure panel. Existing recording comparison, similar-opening practice and microphone level checks remain available.
+- Backup restore now includes reader preferences, plans, repetition cycles, speed, help choices, saved passage and mode. API keys and recordings are excluded.
+
+### Optional free on-device recognition
+
+Choose **Settings → Recitation checking → Speech method → Experimental Quran model**, save, then **Record & check on device**. Model download requires internet initially; approximately 40 MB of model weights plus runtime files. Processing runs in a Web Worker on your device. No audio is sent to Hugging Face, jsDelivr, Hifz or an AI provider by this method. Downloads contact Hugging Face/jsDelivr. Short recordings are limited to 45 seconds; cancellation terminates the worker. Loading/performance and browser cache retention vary by device. Browser speech remains the default.
+
+Model: `Sharjeelbaig/whisper-tiny-ar-quran-onnx`, pinned revision `cd93bdec117adc2f84d6c4ab91c10164a2e9bee9`, Apache-2.0, converted from `tarteel-ai/whisper-tiny-ar-quran`. Runtime: Transformers.js 4.2.0. Model card: https://huggingface.co/Sharjeelbaig/whisper-tiny-ar-quran-onnx . This is not Tarteel's production recognition service and does not assess tajweed or reliably classify letter-level pronunciation.
+
+Controlled evaluation in `recognition-evaluation.json`: three Alafasy Fatiha clips transcribed without normalized word differences; one clip with light added pink noise also matched. A different verse checked against the intended verse produced differences. Raw model output hallucinated words from digital silence, so the application rejects silent/very-quiet recordings before inference. This RMS guard is not a general speech/noise classifier. The sample is too small and narrow to claim overall accuracy, and contains no student or real phone microphone tests. Models may still invent or overlook words. Browser speech only saves finalized recognition results, never provisional interim words, as suspected mistakes.

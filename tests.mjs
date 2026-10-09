@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {normalize,tokenize,alignWords,buildQueue,nextReview,locatePassage,setOrthography,canonicalQuranWord} from './engine.js';
+import {normalize,tokenize,alignWords,alignPractice,buildQueue,nextReview,locatePassage,setOrthography,canonicalQuranWord} from './engine.js';
 const corpus=JSON.parse(await readFile(new URL('./quran.json',import.meta.url)));
 assert.equal(corpus.length,114);let id=1;for(let s=0;s<114;s++){assert.equal(corpus[s].id,s+1);for(let n=0;n<corpus[s].verses.length;n++){const v=corpus[s].verses[n];assert.equal(v.id,id++);assert.equal(v.n,n+1);assert.ok(v.text.length);assert.ok(v.page>=1&&v.page<=604);}}assert.equal(id,6237);
 assert.equal(normalize('قُلْ هُوَ ٱللَّهُ أَحَدٌ'),'قل هو الله احد');
@@ -21,3 +21,12 @@ console.log('PASS: 114 surahs / 6236 verse IDs; word alignment; unfinished passa
 const spelling=JSON.parse(await readFile(new URL('./orthography.json',import.meta.url)));setOrthography(spelling);assert.equal(canonicalQuranWord(tokenize(corpus[0].verses[1].text).at(-1)), 'العالمين');assert.equal(alignWords(tokenize(corpus[0].verses[1].text).map(canonicalQuranWord),tokenize('الحمد لله رب العالمين')).differences.length,0);assert.equal(canonicalQuranWord('الرحمن'),'الرحمن');console.log('PASS Quran spelling comparison with simple-clean text.');
 
 assert.ok(locatePassage(corpus,'الرحمن علم القران خلق الانسان').candidates.some(x=>x.surah===55&&x.verse===1));console.log('PASS passage lookup across short adjacent verses.');
+
+const expected=['قل','هو','الله','احد'];
+assert.equal(alignPractice(expected,[...expected,...expected],{repeat:true}).differences.length,0);
+assert.equal(alignPractice(expected,[...expected,...expected],{repeat:false}).differences.length,4);
+assert.equal(alignPractice(expected,expected.slice(0,3),{complete:true}).differences[0].kind,'missing');
+assert.equal(alignPractice(expected,expected.slice(0,3),{complete:false}).remaining,1);
+assert.ok(alignPractice(expected,[...expected,'قل','هو','الله','الصمد'],{repeat:true}).differences.some(x=>x.kind==='replace'));
+assert.equal(alignPractice(expected,[],{complete:false}).differences.length,0);
+console.log('PASS repeat practice, complete-test endings, silence and genuine mismatches preserved.');

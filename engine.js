@@ -42,3 +42,12 @@ export function locatePassage(surahs,heard) {
  for(const s of surahs)for(let i=0;i<s.verses.length;i++){const v=s.verses[i],first=tokenize(v.text).map(canonicalQuranWord).join(' ');const joined=s.verses.slice(i,i+4).map(x=>tokenize(x.text).map(canonicalQuranWord).join(' ')).join(' ');const offset=joined.indexOf(phrase);if(offset>=0&&offset<first.length&&(offset===0||joined[offset-1]===' ')){exact.push({surah:s.id,verse:v.n});if(exact.length>=12)return{candidates:exact,reason:'Several verses share these words.'};}}
  return {candidates:exact,reason:exact.length?'Choose the verse you meant.':'No confident match. Select your passage and try again.'};
 }
+
+// Repeat practice removes only exact complete repetitions; mismatches stay visible.
+export function alignPractice(expected,heard,{complete=false,repeat=false}={}){
+ const a=Array.isArray(expected)?expected:tokenize(expected),b=Array.isArray(heard)?heard:tokenize(heard);
+ let offset=0,repetitions=0;
+ if(repeat&&a.length){while(b.length-offset>=a.length&&a.every((w,i)=>w===b[offset+i])){repetitions++;offset+=a.length;}}
+ const input=offset>0?(offset===b.length?a:b.slice(offset)):b;
+ return {...alignWords(a,input,{complete}),repetitions};
+}
