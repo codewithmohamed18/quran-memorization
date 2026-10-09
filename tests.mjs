@@ -83,3 +83,9 @@ assert.equal(voice.locateVoicePassage([{id:1,verses:[{n:5,text:'اياك نعب�
 assert.equal(voice.locateVoicePassage([{id:1,verses:[{n:1,text:'بسم الله الرحمن الرحيم'}]}],'بسم الله الرحمن الرحيم').candidates.length,0);
 assert.equal(voice.locatePassage([{id:1,verses:[{n:2,text:'الحمد لله رب العالمين'}]}],'الحمد لله رب العالم').candidates.length,0);
 console.log('PASS search revision cleanup, partial-word rejection and introductory Bismillah boundaries.');
+
+let gate={};for(let t=0;t<10000;t+=100)gate=voice.advanceSpeechGate(gate,0,t);assert(!gate.stop);
+gate={};for(let t=0;t<=500;t+=100)gate=voice.advanceSpeechGate(gate,.04,t);gate=voice.advanceSpeechGate(gate,0,4300,4000);assert(!gate.stop);gate=voice.advanceSpeechGate(gate,0,4500,4000);assert(gate.stop);
+gate={};gate=voice.advanceSpeechGate(gate,.04,0);gate=voice.advanceSpeechGate(gate,.04,100);gate=voice.advanceSpeechGate(gate,0,5000);assert(!gate.stop,'short noise must not submit a recording');
+const waveform=new Float32Array(16000*5);waveform.fill(.1,16000,32000);const cropped=voice.trimQuietAudio(waveform,16000);assert.equal(cropped.length,24000);assert(cropped.some(x=>x>.09));assert.equal(voice.trimQuietAudio(new Float32Array(100),16000).length,100);
+console.log('PASS pause completion requires sustained sound and preserves short pauses; silence trim preserves speech with context.');

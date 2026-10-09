@@ -181,3 +181,12 @@ On-device model download consent is remembered. Preparation, recording and check
 Voice search stops qari playback, merges overlapping recognition revisions, and opens a single exact word match automatically. Ambiguous phrases still show choices. Search cleanup is never applied to recitation mistake checking.
 
 The exact introductory Bismillah is separated from numbered first-ayah text except Al-Fatiha; At-Tawba is unchanged. Source first-ayah recordings can include the opening formula. No unverified time offset is used to cut it away.
+
+### 2.1 automatic checking
+The normal private Record action prepares the model inline without opening the setup dialog. First use still downloads model/runtime files; the status explains this. After sustained sound, a quiet pause of 4 seconds triggers recorded checking automatically. Use the inline Pause control or Settings to choose 2, 4 or 6 seconds, or disable automatic checking. Quiet starts and short noise bursts do not auto-submit. Background sound may prevent pause detection; Check now and the 45-second cap remain available.
+
+Live browser checking is directly selectable above the Quran in Recite/Test. It follows recognized words and completes after a final-result pause or an exact selected-passage match. Interim results do not become mistake notes. Browser speech service availability, connectivity and processing of audio vary by device. Private checking is still an offline recording model, not continuous live AI; cropping quiet ends avoids processing unnecessary silence, without a promised speedup.
+
+A compact result automatically appears on the page, including the first suspected word and a qari replay action. Low-context comparisons suppress red highlights. Slow jobs show elapsed time and an explicit Live option; switching cancels local work rather than silently sending audio elsewhere. Test mode hides full-surah playback clutter.
+
+Review research: Tarteel public app reviews report distracting recurring popups, too much playback setup and wrong-page follow-along. Its support documents discuss delayed feedback and false flags from unclear microphone input. These findings informed inline status, simpler recording controls, cautious flags and explicit checking-mode choices. https://apps.apple.com/us/app/tarteel-ai-quran-memorization/id1391009396?see-all=reviews https://support.tarteel.ai/en/articles/12414463-voice-search-or-feedback-is-slow https://support.tarteel.ai/en/articles/16559266-a-mistake-was-flagged-that-i-didn-t-make
