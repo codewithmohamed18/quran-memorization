@@ -52,3 +52,6 @@ export function alignPractice(expected,heard,{complete=false,repeat=false}={}){
  return {...alignWords(a,input,{complete}),repetitions};
 }
 export function hasAudibleSignal(samples,threshold=.001){if(!samples?.length)return false;let sum=0;for(const x of samples){if(!Number.isFinite(x))return false;sum+=x*x;}return Math.sqrt(sum/samples.length)>=threshold;}
+
+// Only contiguous exact matches move the live reader; later coincidences stay unverified.
+export function trackingPosition(alignment){let position=0;for(const op of alignment?.ops||[]){if(op.kind!=='match'||op.index!==position)break;position++;}return position;}

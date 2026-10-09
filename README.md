@@ -113,3 +113,11 @@ Choose **Settings → Recitation checking → Speech method → Experimental Qur
 Model: `Sharjeelbaig/whisper-tiny-ar-quran-onnx`, pinned revision `cd93bdec117adc2f84d6c4ab91c10164a2e9bee9`, Apache-2.0, converted from `tarteel-ai/whisper-tiny-ar-quran`. Runtime: Transformers.js 4.2.0. Model card: https://huggingface.co/Sharjeelbaig/whisper-tiny-ar-quran-onnx . This is not Tarteel's production recognition service and does not assess tajweed or reliably classify letter-level pronunciation.
 
 Controlled evaluation in `recognition-evaluation.json`: three Alafasy Fatiha clips transcribed without normalized word differences; one clip with light added pink noise also matched. A different verse checked against the intended verse produced differences. Raw model output hallucinated words from digital silence, so the application rejects silent/very-quiet recordings before inference. This RMS guard is not a general speech/noise classifier. The sample is too small and narrow to claim overall accuracy, and contains no student or real phone microphone tests. Models may still invent or overlook words. Browser speech only saves finalized recognition results, never provisional interim words, as suspected mistakes.
+
+
+## 1.4.0 — Ayah context and safer follow-along
+- Previous/next ayah browsing and expandable neighbouring verses preserve the current attempt.
+- Hidden words preserve their glyph footprint; the reader reveals only the contiguous matching prefix, stopping at uncertain words instead of highlighting scattered later matches. This is conservative text tracking, not a measured improvement in acoustic recognition accuracy.
+- Microphone transcript is collapsed by default; softer highlights and accessible ayah controls.
+- Reveal-current-ayah hint, two-ayah connection lesson, page-specific mistake notes and highlighted differences in similar openings. Existing recording export, adjustable phrase hints, revision scheduling and correction timing remain available.
+- Exact 13-line color tajweed edition is pending verification of a suitable source and layout. Current reader remains flowing Uthmani text; no tajweed assessment.

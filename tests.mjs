@@ -37,3 +37,10 @@ assert.equal(hasAudibleSignal([.1,-.1,.2,-.2]),true);
 let controlled=0;
 for(const surah of corpus)for(const v of surah.verses){const words=tokenize(v.text).map(canonicalQuranWord);assert.equal(alignPractice(words,words,{complete:true}).differences.length,0);const changed=[...words];changed[Math.floor(words.length/2)]='اختبار';assert.ok(alignPractice(words,changed,{complete:true}).differences.length>0);controlled++;}
 console.log(`PASS ${controlled} exact text comparisons and ${controlled} controlled changed-word comparisons. These are not microphone accuracy measurements.`);
+
+const {trackingPosition}=await import('./engine.js');
+assert.equal(trackingPosition(alignWords(['a','b','c'],['a','x','c'])),1);
+assert.equal(trackingPosition(alignWords(['a','b'],['a','b'])),2);
+assert.equal(trackingPosition(null),0);
+assert.equal(trackingPosition(alignWords(['a','b','c'],['x','b','c'])),0);
+console.log('PASS uncertain and scattered matches cannot advance live reader.');
