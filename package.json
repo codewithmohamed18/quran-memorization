@@ -1,1 +1,1 @@
-{"name":"hifz-quran-memorization","version":"2.0.0","private":true,"type":"module","scripts":{"test":"node tests.mjs","check":"node --check app.js && node --check engine.js && node --check sw.js && node --check local-asr-worker.js"}}
+{"name":"hifz-quran-memorization","version":"2.0.1","private":true,"type":"module","scripts":{"test":"node tests.mjs","check":"node --check app.js && node --check engine.js && node --check sw.js && node --check local-asr-worker.js"}}
