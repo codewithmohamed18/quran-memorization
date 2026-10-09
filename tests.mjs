@@ -62,6 +62,7 @@ console.log('PASS exact verse restarts, incorrect repeats retained, shared prefi
 
 setOrthography({variant:'canonical'});
 assert.equal(locatePassage([{id:7,verses:[{n:1,text:'canonical b c d'}]}],'variant b c d').candidates[0].surah,7);
+setOrthography(JSON.parse(await readFile(new URL('./orthography.json',import.meta.url))));
 assert.equal(locatePassage([corpus[0]],'الحمد لله رب العالمين').candidates[0].verse,2);
 assert.equal(locatePassage([corpus[0]],'الحمد لله').candidates.length,0);
 console.log('PASS heard-word spelling normalization, scoped Quran lookup and minimum search evidence.');
