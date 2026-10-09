@@ -59,3 +59,9 @@ assert(alignPractice(ex,['a','b','c','a','x','c','d','e','f'],{repeat:true,verse
 assert(alignPractice(ex,['a','b','c','a','b','c','d','e','f'],{repeat:false,verseRefs:refs}).differences.length>0);
 const shared=alignPractice(['a','b','a','b','c'],['a','b','a','b','c'],{repeat:true,verseRefs:['1','1','2','2','2']});assert.equal(shared.verseRepetitions,0);assert.equal(shared.differences.length,0);
 console.log('PASS exact verse restarts, incorrect repeats retained, shared prefixes preserved.');
+
+setOrthography({variant:'canonical'});
+assert.equal(locatePassage([{id:7,verses:[{n:1,text:'canonical b c d'}]}],'variant b c d').candidates[0].surah,7);
+assert.equal(locatePassage([corpus[0]],'الحمد لله رب العالمين').candidates[0].verse,2);
+assert.equal(locatePassage([corpus[0]],'الحمد لله').candidates.length,0);
+console.log('PASS heard-word spelling normalization, scoped Quran lookup and minimum search evidence.');

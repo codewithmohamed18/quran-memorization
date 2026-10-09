@@ -151,3 +151,16 @@ Feedback and model research:
 - https://support.tarteel.ai/en/articles/16559266-a-mistake-was-flagged-that-i-didn-t-make — noise, microphone and model limitations.
 - https://github.com/yazinsai/tilawa — alternative on-device recognition and split code/model licensing.
 - https://huggingface.co/Sharjeelbaig/whisper-tiny-ar-quran-onnx — existing Apache-2.0 Quran model conversion.
+
+### 1.8.0 — microphone, voice search and continuation testing
+The microphone distinguishes live recitation from recorded on-device checking. First local use has one Prepare model & record action; a prepared model starts recording directly on later taps in the same visit. Reloading can require preparation again, with downloaded assets subject to browser caching. Selecting cloud checking without a key now offers the two free methods.
+
+Individual-ayah playback remembers a separate verse-audio edition. If the saved full-surah qari has a matching verse edition it is used; otherwise the last verse-audio choice (default Alafasy) is used and labelled explicitly. The full-surah preference is kept. Failed retries bypass offline audio cache and refresh URLs. Backup restores validate the verse edition.
+
+Test myself opens the test range picker; Tools also exposes continuation tests. A random complete-ayah prompt plays, then the following selected number of ayahs are hidden for your turn. My turn skips the prompt; replay and new question remain available. This tests the continuation after the prompt, not tajweed.
+
+Voice search adds surah scope, editable recognized words and candidate previews. Choosing a result opens it for reading. Heard words now use the same Quran spelling normalization as candidate verses. No uncertain fuzzy candidate is chosen automatically. Settings add category filters and text search without discarding hidden field values.
+
+Checks: syntax and corpus comparison tests; controlled DOM checks for settings filters, voice scope, verse fallback without changing saved qari, test prompt/answer transition, missing-cloud-key fallback and prepared-local-model recording route. Existing repeat, uncertainty, silence and feedback checks pass. These are software checks, not learner-microphone accuracy percentages.
+
+A larger free candidate, mohammed/fastconformer-quran-ar-onnx-int8, was researched. Its public file listing is about 143 MB, and its author notes pending runtime verification/cache configuration. It is not shipped as an unverified replacement: https://huggingface.co/mohammed/fastconformer-quran-ar-onnx-int8/blob/main/README.md . The current Quran model is unchanged.
