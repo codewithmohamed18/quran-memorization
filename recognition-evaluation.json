@@ -50,5 +50,11 @@
       "matchedWords": 0,
       "possibleDifferences": 4
     }
-  ]
+  ],
+  "sources": [
+    "https://everyayah.com/data/Alafasy_128kbps/001001.mp3",
+    "https://everyayah.com/data/Alafasy_128kbps/001002.mp3",
+    "https://everyayah.com/data/Alafasy_128kbps/001003.mp3"
+  ],
+  "browserVerification": "Chrome cloud browser successfully processed uploaded 1:2 audio with 4 matches / 0 differences and flagged uploaded 1:3 against expected 1:2. Not a phone microphone test."
 }

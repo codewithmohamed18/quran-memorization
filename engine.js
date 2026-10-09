@@ -51,3 +51,4 @@ export function alignPractice(expected,heard,{complete=false,repeat=false}={}){
  const input=offset>0?(offset===b.length?a:b.slice(offset)):b;
  return {...alignWords(a,input,{complete}),repetitions};
 }
+export function hasAudibleSignal(samples,threshold=.001){if(!samples?.length)return false;let sum=0;for(const x of samples){if(!Number.isFinite(x))return false;sum+=x*x;}return Math.sqrt(sum/samples.length)>=threshold;}

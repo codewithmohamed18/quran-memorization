@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
-import {normalize,tokenize,alignWords,alignPractice,buildQueue,nextReview,locatePassage,setOrthography,canonicalQuranWord} from './engine.js';
+import {normalize,tokenize,alignWords,alignPractice,hasAudibleSignal,buildQueue,nextReview,locatePassage,setOrthography,canonicalQuranWord} from './engine.js';
 const corpus=JSON.parse(await readFile(new URL('./quran.json',import.meta.url)));
 assert.equal(corpus.length,114);let id=1;for(let s=0;s<114;s++){assert.equal(corpus[s].id,s+1);for(let n=0;n<corpus[s].verses.length;n++){const v=corpus[s].verses[n];assert.equal(v.id,id++);assert.equal(v.n,n+1);assert.ok(v.text.length);assert.ok(v.page>=1&&v.page<=604);}}assert.equal(id,6237);
 assert.equal(normalize('قُلْ هُوَ ٱللَّهُ أَحَدٌ'),'قل هو الله احد');
@@ -30,3 +30,10 @@ assert.equal(alignPractice(expected,expected.slice(0,3),{complete:false}).remain
 assert.ok(alignPractice(expected,[...expected,'قل','هو','الله','الصمد'],{repeat:true}).differences.some(x=>x.kind==='replace'));
 assert.equal(alignPractice(expected,[],{complete:false}).differences.length,0);
 console.log('PASS repeat practice, complete-test endings, silence and genuine mismatches preserved.');
+
+assert.equal(hasAudibleSignal(new Float32Array(16000)),false);
+assert.equal(hasAudibleSignal([NaN]),false);
+assert.equal(hasAudibleSignal([.1,-.1,.2,-.2]),true);
+let controlled=0;
+for(const surah of corpus)for(const v of surah.verses){const words=tokenize(v.text).map(canonicalQuranWord);assert.equal(alignPractice(words,words,{complete:true}).differences.length,0);const changed=[...words];changed[Math.floor(words.length/2)]='اختبار';assert.ok(alignPractice(words,changed,{complete:true}).differences.length>0);controlled++;}
+console.log(`PASS ${controlled} exact text comparisons and ${controlled} controlled changed-word comparisons. These are not microphone accuracy measurements.`);
