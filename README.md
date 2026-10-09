@@ -172,3 +172,12 @@ Choose passage is visible under the reader heading in Read, Memorize, Recite and
 The qāri picker shows a check beside the saved recording. Source metadata retrieved on 9 October 2026 corrected 148 full-surah Cloud entries previously mislabelled as ayah audio. Verse audio now uses source-listed CDN bitrates directly; Retry tries the next available bitrate. Cloud full-surah files use unpadded filenames; MP3Quran uses three-digit filenames. A full-surah edition cannot play a timed individual ayah: ayah taps use a matching verse edition or the saved verse qāri, explicitly named in the player. No silent voice substitution is claimed. Source file lists are not a guarantee that every recording is reachable on every network.
 
 Playing ayahs highlight every visible word, including in continuous page layout. Tapping an ayah marker also plays that ayah. Recognition misheard me dismisses unconfirmed automatic alerts for the selected passage while preserving confirmed notes. The speech model has not changed; checking remains an experimental word comparison, not tajweed assessment.
+
+### 2.0 reader fixes
+Ayah taps, repetition and tests use one saved verse-compatible qari. The reader picker defaults to verse audio; full-surah recordings have a separate saved choice. Tapping an ayah updates the header reference.
+
+On-device model download consent is remembered. Preparation, recording and checking use inline status with cancellation instead of repeated setup dialogs. Actual browser cache persistence depends on device storage. This remains recorded checking, not verified live tajweed assessment.
+
+Voice search stops qari playback, merges overlapping recognition revisions, and opens a single exact word match automatically. Ambiguous phrases still show choices. Search cleanup is never applied to recitation mistake checking.
+
+The exact introductory Bismillah is separated from numbered first-ayah text except Al-Fatiha; At-Tawba is unchanged. Source first-ayah recordings can include the opening formula. No unverified time offset is used to cut it away.

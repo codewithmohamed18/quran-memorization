@@ -72,3 +72,14 @@ assert.equal(new Set(audioCatalog.map(r=>r.id)).size,audioCatalog.length);
 for(const r of audioCatalog){assert(['verse','surah'].includes(r.kind));if(r.kind==='verse')assert(r.bitrates?.length>0);else{assert(r.server.startsWith('https://'));assert(r.surahs.length>0);assert(r.surahs.every(n=>Number.isInteger(n)&&n>=1&&n<=114));}}
 assert.equal(audioCatalog.find(r=>r.id==='ar.abdulbarimohammed').kind,'surah');
 console.log('PASS all catalogue editions classified with source-provided verse bitrates or full-surah file lists. This does not establish continuous provider availability.');
+
+const voice = await import('./engine.js');
+assert.equal(voice.cleanVoiceSearch('اياك اياك اياك نعبد اياك نعبد واياك نستعين'),'اياك نعبد واياك نستعين');
+assert.equal(voice.mergeSearchFragments(['الحمد لله','الحمد لله رب العالمين']),'الحمد لله رب العالمين');
+assert.equal(voice.splitOpening('بسم الله الرحمن الرحيم الم',2,1).body,'الم');
+assert.equal(voice.splitOpening('بسم الله الرحمن الرحيم',1,1).opening,'');
+assert.equal(voice.splitOpening('براءة من الله ورسوله',9,1).opening,'');
+assert.equal(voice.locateVoicePassage([{id:1,verses:[{n:5,text:'اياك نعبد واياك نستعين'}]}],'اياك اياك اياك نعبد اياك نعبد واياك نستعين').candidates[0].verse,5);
+assert.equal(voice.locateVoicePassage([{id:1,verses:[{n:1,text:'بسم الله الرحمن الرحيم'}]}],'بسم الله الرحمن الرحيم').candidates.length,0);
+assert.equal(voice.locatePassage([{id:1,verses:[{n:2,text:'الحمد لله رب العالمين'}]}],'الحمد لله رب العالم').candidates.length,0);
+console.log('PASS search revision cleanup, partial-word rejection and introductory Bismillah boundaries.');
